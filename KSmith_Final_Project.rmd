@@ -55,6 +55,14 @@ summary_stats_table$Value <- round(summary_stats_table$Value, 2)
 print(paste("Summary Statistics for", first_gene_name, "Gene"))
 print (summary_stats_table)
 
+#save as image using example here: https://stackoverflow.com/questions/23365096/r-save-table-as-image
+library(gridExtra)
+
+png("summary_stats_table", width = 600, height = 400)
+grid.table(summary_stats_table)
+dev.off()
+
+
 #Second gene
 #PGR progesterone receptor [Source:HGNC Symbol;Acc:HGNC:8910]
 #https://useast.ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=ENSG00000082175;r=11:101029624-101129813
@@ -92,6 +100,12 @@ sec_summary_stats_table$Value <- round(sec_summary_stats_table$Value, 2)
 
 print(paste("Summary Statistics for", second_gene_name, "Gene"))
 print (sec_summary_stats_table)
+
+#save as image using example here: https://stackoverflow.com/questions/23365096/r-save-table-as-image
+
+png("sec_summary_stats_table", width = 600, height = 400)
+grid.table(sec_summary_stats_table)
+dev.off()
 
 ```
 
