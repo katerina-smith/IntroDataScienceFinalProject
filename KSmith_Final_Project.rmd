@@ -322,7 +322,7 @@ draw(gene_heatmap,
 jitter_plot <-
   ggplot(jitter_data, aes(x = prior_malignancy, y = count_value,
                    color = prior_malignancy)) +
-    labs(title = paste("Violin Plot for", first_gene_name,"Gene"),
+    labs(title = paste("Jitter Plot for", first_gene_name,"Gene"),
       x = "Prior Malignancy", y = "Gene Count") +
        scale_color_brewer(palette = "Dark2", guide = "none") +
   theme(plot.title = element_text(size = 15, hjust = 0.5, face = "bold"), 
